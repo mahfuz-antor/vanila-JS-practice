@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <title>JS Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+        <h1 class="text-3xl font-bold text-teal-400 text-center uppercase py-8">
+            simple Calculator
+        </h1>
+        <div class="calculator--keys w-fit py-5 px-8 mx-auto border-2 border-teal-400">
+            <div class="flex justify-between mx-auto bg-slate-300 text-center py-5 rounded px-2">
+                <h6 class="calculator--display" id="adding">0</h6>
+                <h6 class="showing">0</h6>
+            </div>
+            <div class=" grid grid-cols-4 gap-4 pt-5">
+                <button id="one" class="bg-gray-800 w-16 h-16 text-white rounded">1</button>
+                <button class="bg-gray-800 w-16 h-16 text-white rounded">2</button>
+                <button class="bg-gray-800 w-16 h-16 text-white rounded">3</button>
+                <button class="key--operator bg-gray-800 w-16 h-16 text-white rounded" data-action="add">+</button>
+                <button class="bg-gray-800 w-16 h-16 text-white rounded">4</button>
+                <button class="bg-gray-800 w-16 h-16 text-white rounded">5</button>
+                <button class="bg-gray-800 w-16 h-16 text-white rounded">6</button>
+                <button class="key--operator bg-gray-800 w-16 h-16 text-white rounded" data-action="subtract">-</button>
+                <button class="bg-gray-800 w-16 h-16 text-white rounded">7</button>
+                <button class="bg-gray-800 w-16 h-16 text-white rounded">8</button>
+                <button class="bg-gray-800 w-16 h-16 text-white rounded">9</button>
+                <button class="key--operator bg-gray-800 w-16 h-16 text-white rounded" data-action="multiply">*</button>
+                <button class="key--operator bg-gray-800 w-16 h-16 text-white rounded" data-action="divide">/</button>
+                <button class="bg-gray-800 w-16 h-16 text-white rounded">0</button>
+                <button class="bg-gray-800 w-16 h-16 text-white rounded" data-action="decimal">.</button>
+                <button class="key--equal bg-gray-800 w-16 h-16 text-white rounded" data-action="calculate">=</button>
+            </div>
+            <div class=" grid grid-cols-1 mx-auto py-2">
+                <button class=" bg-teal-600 text-center py-5 text-white rounded" data-action="clear">Clear All</button>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
