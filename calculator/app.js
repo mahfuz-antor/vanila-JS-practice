@@ -1,9 +1,7 @@
 const calculate = (n1, operator, n2) => {
   let result = "";
-
   if (operator === "add") {
     result = parseFloat(n1) + parseFloat(n2);
-    console.log("adding number", result);
   } else if (operator === "subtract") {
     result = parseFloat(n1) - parseFloat(n2);
   } else if (operator === "multiply") {
@@ -11,13 +9,13 @@ const calculate = (n1, operator, n2) => {
   } else if (operator === "divide") {
     result = parseFloat(n1) / parseFloat(n2);
   }
-  console.log(result);
+
   return result;
 };
 
 const calculator = document.querySelector(".calculator");
-const keys = document.querySelector(".calculator--keys");
-const display = document.querySelector(".calculator--display");
+const display = calculator.querySelector(".calculator__display");
+const keys = calculator.querySelector(".calculator__keys");
 
 keys.addEventListener("click", (e) => {
   if (e.target.matches("button")) {
@@ -53,7 +51,7 @@ keys.addEventListener("click", (e) => {
       // Add custom attribute
       calculator.dataset.previousKeyType = "operator";
 
-      calculator.dataset.fistValue = displayedNum;
+      calculator.dataset.firstValue = displayedNum;
       calculator.dataset.operator = action;
     }
 
