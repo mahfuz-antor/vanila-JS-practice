@@ -1,5 +1,5 @@
 const calculate = (n1, operator, n2) => {
-  let result = "";
+  let result = 0;
   if (operator === "add") {
     result = parseFloat(n1) + parseFloat(n2);
   } else if (operator === "subtract") {
@@ -56,7 +56,7 @@ keys.addEventListener("click", (e) => {
     }
 
     if (action === "clear") {
-      console.log("Clear Button!");
+      display.textContent = 0;
     }
 
     if (action === "calculate") {
