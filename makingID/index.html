@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Making Unique ID</title>
+</head>
+<body>
+    <div
+        class="bg-gradient-to-r from-blue-500 via-blue-400 to-indigo-500 h-screen w-screen flex justify-center items-center">
+        <div class="w-fit h-fit py-5 bg-white rounded mx-auto">
+            <h1 class="text-3xl text-gray-700 font-bold uppercase px-8 pt-8 pb-5">
+                Making Unique ID
+            </h1>
+            <div class="w-3/4 mx-auto text-center py-2 px-3 flex justify-between bg-slate-100 shadow-lg rounded-lg">
+                <h4 class="text-lg text-gray-700 font-medium flex items-center">
+                    Your Unique ID: &nbsp; <span id="showID" class="text-lg text-blue-600 font-medium"> 202210 </span>
+                </h4>
+                <img class="w-10 h-10" src="https://i.ibb.co/30JsTkQ/2-24109-computer-icons-login-person-black-black-and-white-removebg-preview.png" alt="lock icon">
+            </div>
+            <button onclick="makingUniqueID()" id="makingIDBtn"
+                class="bg-blue-800 text-white block mt-4 ml-[60px] text-lg py-2 px-2 rounded-md">Generate Unique ID</button>
+            <h4 class="text-center text-lg text-gray-700 px-8 font-medium pt-16">
+                [ HTML Tailwind & Vanilla Javascript <span class="text-blue-800">Mini Project</span> ]
+            </h4>
+        </div>
+    </div>
+    
+    <script src="./app.js"></script>
+</body>
+</html>
