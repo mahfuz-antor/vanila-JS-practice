@@ -14,10 +14,7 @@ const fullDay = new Date().toLocaleString("en-us", {
 const dateTime = new Date().getDate() + " " + month + ", " + fullDay;
 
 timeShow.innerHTML = dateTime;
-
-const deleteData = (i) => {
-  console.log(i);
-};
+// end the time
 
 const displayData = () => {
   const taskWrap = document.getElementById("taskWrap");
@@ -30,7 +27,8 @@ const displayData = () => {
                     <h4 id="showTask" class=" flex items-center text-xl font-medium ">
                         ${d}
                     </h4>
-                    <img src="https://i.ibb.co/Pz4QgL6/images-removebg-preview-1.png" class="w-8 h-8 cursor-pointer" id="deleteTask"/>
+                    <img src="https://i.ibb.co/Pz4QgL6/images-removebg-preview-1.png" class="w-8 h-8 cursor-pointer" id="deleteTask" onclick='${() =>
+                      deleteData()}' />
                 
                 </div>`;
     })
