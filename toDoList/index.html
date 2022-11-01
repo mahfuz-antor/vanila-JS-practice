@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <title>To Do List</title>
+</head>
+<body class="bg-[#ecfcff]">
+    <div class="m-auto w-full py-5 h-screen overflow-auto flex justify-center items-center">
+        <!-- <img src="https://i.pinimg.com/originals/0e/ba/e6/0ebae6f55248df4b26c71044ca1d9707.png" alt=""> -->
+        <div class="max-w-md w-full shadow-md shadow-blue-500/50 m-auto">
+            <div class="bg-gradient-to-r from-[#2fedfd] to-[#52bffc] rounded-t-lg">
+                <p id="time" class="text-white py-5 px-5 text-lg font-medium ">
+                    31 October, Monday
+                </p>
+            </div>
+            
+            <form id="formId" class="flex justify-between gap-5 items-center bg-white py-2 px-2">
+                <input id="taskInput" placeholder="Write your to do" type="text" class=" py-2 px-3 w-full rounded-md border-2 border-blue-300 focus:outline-blue-500">
+                <button type="submit" id="addBtn" class="py-2.5 px-7 bg-[#52bffc] rounded-lg text-white font-medium">
+                    Add
+                </button>
+            </form>
+            <div id="taskWrap" class="m-auto">
+                
+            </div>
+            <!-- <div class="flex justify-between gap-5 items-center bg-white py-5 px-8 text-gray-700 hover:scale-110 transition-all ease duration-300 hover:shadow-md shadow-blue-500/50  hover:border-l-8 border-[#52bffc]">
+                    <h4 id="showTask" class=" flex items-center text-xl font-medium ">
+                        New Task 2
+                    </h4>
+                    <img src="https://i.ibb.co/Pz4QgL6/images-removebg-preview-1.png" class="w-8 h-8 cursor-pointer"/>
+            </div> -->
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
