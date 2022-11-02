@@ -16,6 +16,7 @@ const dateTime = new Date().getDate() + " " + month + ", " + fullDay;
 timeShow.innerHTML = dateTime;
 // end the time
 
+// Display function
 const displayData = () => {
   const taskWrap = document.getElementById("taskWrap");
   const data = JSON.parse(localStorage.getItem("taskData")) || [];
@@ -27,9 +28,9 @@ const displayData = () => {
                     <h4 id="showTask" class=" flex items-center text-xl font-medium ">
                         ${d}
                     </h4>
-                    <img src="https://i.ibb.co/Pz4QgL6/images-removebg-preview-1.png" class="w-8 h-8 cursor-pointer" id="deleteTask" onclick='${() =>
-                      deleteData()}' />
-                
+                    <img src="https://i.ibb.co/Pz4QgL6/images-removebg-preview-1.png" class="w-8 h-8 cursor-pointer" id=${
+                      "remove-" + i
+                    } />
                 </div>`;
     })
     .join("");
@@ -37,6 +38,24 @@ const displayData = () => {
 
 displayData();
 
+// Data Delete Function
+const deleteAll = () => {
+  let allData = JSON.parse(localStorage.getItem("taskData"));
+  allData.forEach((e, i) => {
+    document.getElementById(`remove-${i}`).addEventListener("click", () => {
+      let getI = i;
+      allData.splice(getI, 1);
+      localStorage.setItem("taskData", JSON.stringify(allData));
+      displayData();
+      allData = JSON.parse(localStorage.getItem("taskData"));
+      deleteAll();
+    });
+  });
+};
+
+deleteAll();
+
+// Data add Function
 const addTask = (e) => {
   e.preventDefault();
   let data = taskInput.value;
@@ -44,10 +63,7 @@ const addTask = (e) => {
   localStorage.setItem("taskData", JSON.stringify([...getLocalData, data]));
   e.target.reset();
   displayData();
-  // location.reload();
-  //   if (data === "") {
-  //     data = window.location.reload();
-  //   }
+  deleteAll();
 };
 
 document.getElementById("formId").addEventListener("submit", (e) => {
