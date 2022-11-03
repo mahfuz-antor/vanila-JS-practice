@@ -9,7 +9,7 @@ for (let i = 0; i <= 10; i++) {
 // swap variable
 let first = 10;
 let second = 20;
-console.log(first, second);
+// console.log(first, second);
 
 // let setFirst = first;
 // first = second;
@@ -49,3 +49,32 @@ const largestOutput = [12, 32, 44, 89];
 resultLargest = largestNumber(largestOutput);
 
 // console.log(resultLargest);
+
+// function to get the small number from an Array
+
+const gettingSmallNumber = (numbers) => {
+  let smallNum = numbers[0];
+  for (let i = 0; i <= numbers.length; i++) {
+    let elementNum = numbers[i];
+    if (elementNum < smallNum) {
+      smallNum = elementNum;
+    }
+  }
+  return smallNum;
+};
+const numbersArray = [50, 43, 12, 10, 30];
+const findSmallNum = gettingSmallNumber(numbersArray);
+
+// console.log(findSmallNum);
+
+const smallNumFromThree = (num1, num2, num3) => {
+  if (num1 < num2 && num1 < num3) {
+    console.log("num1 is the smallest:", num1);
+  } else if (num2 < num1 && num2 < num3) {
+    console.log("num2 is the smallest:", num2);
+  } else {
+    console.log("num3 is the smallest:", num3);
+  }
+};
+
+// smallNumFromThree(40, -330, 10);
