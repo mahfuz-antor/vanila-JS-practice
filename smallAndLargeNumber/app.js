@@ -19,14 +19,30 @@ const getSmallNumArray = (numbers) => {
   let smallest = numbers[0];
   for (let i = 0; i < numbers.length; i++) {
     let element = numbers[i];
+    console.log(element);
     if (element < smallest) {
+      console.log(element);
       smallest = element;
     }
   }
   return smallest;
 };
-const getSmallResult = getSmallNumArray([20, 30, -48, 100]);
-// console.log(getSmallResult);
+const getSmallResult = getSmallNumArray([20, 30, 48, 100]);
+console.log(getSmallResult);
+
+// Getting the average number
+const getAverageNumArray = (numbers) => {
+  let smallest = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    let element = numbers[i];
+    smallest += element;
+    // console.log(smallest);
+  }
+  let result = smallest / numbers.length;
+  return result;
+};
+const getAverageResult = getAverageNumArray([1, 2, 3, 4, 5]);
+// console.log(getAverageResult);
 
 // Getting the Large Number from three
 
