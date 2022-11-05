@@ -47,7 +47,6 @@ const largestNumber = (allNum) => {
 
 const largestOutput = [12, 32, 44, 89];
 resultLargest = largestNumber(largestOutput);
-
 // console.log(resultLargest);
 
 // function to get the small number from an Array
