@@ -72,3 +72,14 @@ const stopNegativeValue = (numbers) => {
   showTaskFour.innerHTML = newNumbers;
 };
 stopNegativeValue(numbersFour);
+
+// Changing the Object value
+const changingObject = {
+  name: "Mahfuz",
+  age: 25,
+  profession: "Student",
+};
+
+console.log((changingObject.name = "antor"));
+
+console.log(changingObject);
