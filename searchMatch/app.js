@@ -30,8 +30,8 @@ searchResultShow.innerHTML = getData.map((data) => data.name);
 
 // find the odd number using while loop
 let i = 0;
-while (i < 20) {
-  i % 2 == 0;
-  console.log(i, "checking while");
+while (i < 19) {
+  i += i % 2 == 1;
   i++;
+  console.log(i, "while looping result");
 }
