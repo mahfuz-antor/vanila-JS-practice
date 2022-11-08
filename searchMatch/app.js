@@ -27,3 +27,11 @@ const searchProducts = (products, searchItem) => {
 const getData = searchProducts(products, "laptop");
 // console.log(getData.map((data) => data.name));
 searchResultShow.innerHTML = getData.map((data) => data.name);
+
+// find the odd number using while loop
+let i = 0;
+while (i < 20) {
+  i % 2 == 0;
+  console.log(i, "checking while");
+  i++;
+}
