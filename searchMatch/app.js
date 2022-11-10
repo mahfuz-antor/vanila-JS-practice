@@ -33,5 +33,14 @@ let i = 0;
 while (i < 19) {
   i += i % 2 == 1;
   i++;
-  console.log(i, "while looping result");
+  // console.log(i, "while looping result");
+}
+
+// just trying to change the DOM Element
+let wrapperDiv = document.querySelectorAll("h2");
+wrapperDiv[1].style.borderRadius = "20px";
+for (const element of wrapperDiv) {
+  element.style.backgroundColor = "#50c5f4";
+  element.style.color = "white";
+  element.style.padding = "20px";
 }
