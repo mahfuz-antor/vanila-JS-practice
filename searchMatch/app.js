@@ -37,7 +37,14 @@ while (i < 19) {
 }
 
 // just trying to change the DOM Element
+// getting element by 5ways
+const elementOne = document.getElementById("headingOne");
+const elementTwo = document.getElementsByClassName("result");
+const elementThree = document.getElementsByTagName("h2");
+const elementFour = document.querySelector("#searchField");
 let wrapperDiv = document.querySelectorAll("h2");
+
+// changing the elements value
 wrapperDiv[1].style.borderRadius = "20px";
 for (const element of wrapperDiv) {
   element.style.backgroundColor = "#50c5f4";
