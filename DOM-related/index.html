@@ -10,12 +10,17 @@
     <div id="wrapper">
         <div class="list-wrap">
             <ul id="list-items">
-                <li class="item">List-1</li>
-                <li class="item">List-2</li>
-                <li class="item">List-3</li>
+                <li class="item">List-1 <button  id="itemOne"> Red</button> </li>
+                <li class="item">List-2 <button id="itemTwo"> remove</button></li>
+                <li class="item">List-3 <button id="itemThree"> green</button></li>
             </ul>
         </div>
-        <button onclick="listAddBtn()" id="listBtn">Add List</button>
+        <button onclick="listAddBtn()" id="listBtn">Add Remove List</button>
+        <br> <br>
+        <input id="inputField" type="text"> <button id="inputBtn">Add Text</button>
+        <ul id="inputResult">
+            Result:
+        </ul>
     </div>
 
     <script src="./app.js"></script>
