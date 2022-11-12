@@ -10,10 +10,38 @@
     <div id="wrapper">
         <h1>Event Key and Mouse</h1>
         <div class="event-trying">
-            <h2 id="hideText">Event > click, focus, blur</h2>
-            <input id="inputField" type="text" placeholder="type delete word">
+            <h2 id="hideText">Event > click, focus, blur, keydown, keypress, keyup, </h2>
+            <input id="inputField" type="text" placeholder="type delete word & click">
             <button id="deleteBtn" disabled >Delete</button>
         </div>
+        <div id="eventBubble">
+            <h2>Checking Event Bubble</h2>
+            <ul id="ulBubble">
+                <li id="itemBubble-one">
+                    Item Bubble One
+                </li>
+                <li id="itemBubble-two">
+                    Item Bubble two
+                </li>
+                <li id="itemBubble-three">
+                    Item Bubble Three
+                </li>
+                <li id="itemBubble-four">
+                    Item Bubble Four
+                </li>
+            </ul>
+        </div>
+        <section>
+            <h2>Delegation practice</h2>
+            <ul id="delegate">
+                <li class="item">Item-One</li>
+                <li class="item">Item-Two</li>
+                <li class="item">Item-Three</li>
+                <li class="item">Item-Four</li>
+                <li class="item">Item-Five</li>
+            </ul>
+        </section>
+        <button id="addItem"> Add Item </button>
     </div>
 
     <script src="./app.js"></script>
