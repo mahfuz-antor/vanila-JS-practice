@@ -1,5 +1,6 @@
+// for login information
 const loginBtn = document.getElementById("loginBtn");
-
+// login function
 loginBtn.addEventListener("click", function () {
   // get the Email
   const emailField = document.getElementById("userEmail");
