@@ -1,19 +1,67 @@
 // add deposit amount:
-const depositBtn = document.getElementById("depositBtn");
-depositBtn.addEventListener("click", function () {
-  const depositField = document.getElementById("depositInput");
-  const depositAmount = depositField.value;
-  //   console.log(depositAmount, "getting deposit");
-  const depositShow = document.getElementById("depositShow");
-  depositShow.innerText = depositAmount;
+const depositInputEnter = document.getElementById("depositInput");
+// deposit input Enter key listener
+depositInputEnter.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    const depositBtn = document.getElementById("depositBtn");
+    depositBtn.click();
+  }
 });
+// onclick function for deposit
+const depositAmount = () => {
+  // getting new deposit amount
+  const depositField = document.getElementById("depositInput");
+  const newDepositAmount = depositField.value;
+  if (newDepositAmount !== "") {
+    // getting previous deposit amount
+    const depositShow = document.getElementById("depositShow");
+    const previousDepositAmount = depositShow.innerText;
+    // getting total amount
+    const totalDeposit =
+      parseFloat(previousDepositAmount) + parseFloat(newDepositAmount);
+    depositShow.innerText = totalDeposit;
+    depositField.value = "";
+    // adding total balance
+    const totalBalance = document.getElementById("totalBalance");
+    const showTotalBalance = parseFloat(totalBalance.innerText);
+    totalBalance.innerText = showTotalBalance + parseFloat(newDepositAmount);
+  } else {
+    alert("Please type any number");
+  }
+};
 
-// add withdraw amount:
-const withdrawBtn = document.getElementById("withdrawBtn");
-withdrawBtn.addEventListener("click", function () {
+// add withdraw amount Part:
+// withdraw amount function
+const withdrawAmount = () => {
+  //getting new amount
   const withdrawField = document.getElementById("withdrawInput");
-  const withdrawAmount = withdrawField.value;
-  //   console.log(withdrawAmount, "withdraw gettin");
-  const withdrawShow = document.getElementById("withdrawShow");
-  withdrawShow.innerText = withdrawAmount;
+  const newWithdrawAmount = withdrawField.value;
+  if (newWithdrawAmount !== "") {
+    // getting old amount
+    const withdrawShow = document.getElementById("withdrawShow");
+    const oldWithdrawAmount = withdrawShow.innerText;
+    // total amount
+    const totalWithdrawAmount =
+      parseFloat(oldWithdrawAmount) + parseFloat(newWithdrawAmount);
+    withdrawShow.innerText = totalWithdrawAmount;
+    withdrawField.value = "";
+    // remove from total balance
+    const getTotalBalance = document.getElementById("totalBalance");
+    const showTotalBalance = parseFloat(getTotalBalance.innerText);
+    // console.log(showTotalBalance, "inside with");
+    getTotalBalance.innerText =
+      showTotalBalance - parseFloat(newWithdrawAmount);
+  } else {
+    alert("type any number!");
+    withdrawField.value = "";
+  }
+};
+
+// Input field Enter key listener
+const withdrawInputEnter = document.getElementById("withdrawInput");
+withdrawInputEnter.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    const withdrawBtn = document.getElementById("withdrawBtn");
+    withdrawBtn.click();
+  }
 });
