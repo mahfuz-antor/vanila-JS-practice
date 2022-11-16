@@ -1,9 +1,16 @@
 const loginBtn = document.getElementById("loginBtn");
 
 loginBtn.addEventListener("click", function () {
+  // get the Email
   const emailField = document.getElementById("userEmail");
   const userEmail = emailField.value;
+  // get the Password
   const passwordField = document.getElementById("userPassword");
   const userPassword = passwordField.value;
-  console.log(userEmail, userPassword);
+  // checking the Email and Password
+  if (userEmail === "mahfuz@gmail.com" && userPassword === "mahfuz") {
+    location.href = "banking.html";
+  } else {
+    alert("Please type correct Email and Password");
+  }
 });
