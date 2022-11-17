@@ -40,17 +40,23 @@ const withdrawAmount = () => {
     // getting old amount
     const withdrawShow = document.getElementById("withdrawShow");
     const oldWithdrawAmount = withdrawShow.innerText;
-    // total amount
+    // total withdraw amount
     const totalWithdrawAmount =
       parseFloat(oldWithdrawAmount) + parseFloat(newWithdrawAmount);
-    withdrawShow.innerText = totalWithdrawAmount;
     withdrawField.value = "";
     // remove from total balance
     const getTotalBalance = document.getElementById("totalBalance");
     const showTotalBalance = parseFloat(getTotalBalance.innerText);
-    // console.log(showTotalBalance, "inside with");
-    getTotalBalance.innerText =
-      showTotalBalance - parseFloat(newWithdrawAmount);
+    // checking the Balance for withdraw amount
+    if (showTotalBalance < newWithdrawAmount) {
+      alert("You don't have enough Balance");
+    } else {
+      // Show withdraw amount
+      withdrawShow.innerText = totalWithdrawAmount;
+      // show total Balance
+      getTotalBalance.innerText =
+        showTotalBalance - parseFloat(newWithdrawAmount);
+    }
   } else {
     alert("type any number!");
     withdrawField.value = "";
