@@ -18,7 +18,6 @@ submitBtn.addEventListener("click", function () {
 
 // getting the three buttons
 const firstBtn = document.getElementById("firstBtn");
-const secondBtn = document.getElementById("secondBtn");
 
 firstBtn.addEventListener("click", function () {
   const showFirstResult = document.getElementById("firstResult");
@@ -30,6 +29,7 @@ firstBtn.addEventListener("click", function () {
   firstInputField.value = "";
 });
 
+const secondBtn = document.getElementById("secondBtn");
 secondBtn.addEventListener("click", function () {
   const showSecondResult = document.getElementById("secondResult");
   const secondInputField = document.getElementById("secondField");
@@ -41,7 +41,17 @@ secondBtn.addEventListener("click", function () {
 });
 
 const thirdBtn = document.getElementById("thirdBtn");
-thirdBtn.addEventListener("click", function () {
+// thirdBtn.addEventListener("click", function () {
+//   const showResult = document.getElementById("thirdResult");
+//   const thirdInputField = document.getElementById("thirdField");
+//   const thirdResult = thirdInputField.value;
+//   const thirdSum = thirdResult * 4;
+//   console.log(thirdSum, "third");
+//   showResult.innerText = thirdSum;
+//   thirdInputField.value = "";
+// });
+
+const thirdAddResult = () => {
   const showResult = document.getElementById("thirdResult");
   const thirdInputField = document.getElementById("thirdField");
   const thirdResult = thirdInputField.value;
@@ -49,4 +59,8 @@ thirdBtn.addEventListener("click", function () {
   console.log(thirdSum, "third");
   showResult.innerText = thirdSum;
   thirdInputField.value = "";
+};
+const thirdInputKey = document.getElementById("thirdField");
+thirdInputKey.addEventListener("keyup", function (event) {
+  console.log(event.target.value, "key is pressing");
 });

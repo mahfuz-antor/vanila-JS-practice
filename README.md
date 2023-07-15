@@ -3,3 +3,5 @@
 ## 1. Calculator Project
 
 ## 2. Calculator Full Code step by step
+
+# Javascript Info Site practicing
