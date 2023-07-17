@@ -5,7 +5,17 @@
 // console.log(c); // 0
 
 // Chaining Assignment
-
 // let a, b, c;
 // a = b = c = 2 + 2;
 // console.log(a, b, c); // 4 4 4
+
+// Modify-in-place
+// let n = 2;
+// n += 5;
+// n *= 2;
+// console.log(n);
+
+// Comparison in Letter
+// console.log("Z" > "A"); // true
+// console.log("Glow" > "Glee"); // true
+// console.log("Bee" > "Be"); // true
