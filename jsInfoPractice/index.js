@@ -21,9 +21,18 @@
 // console.log("Bee" > "Be"); // true
 
 // JS && operator
-let hour = 12;
-let minute = 30;
+// let hour = 12;
+// let minute = 30;
 
-if (hour == 12 && minute == 30) {
-  console.log("The time is 12:30");
-}
+// if (hour == 12 && minute == 30) {
+//   console.log("The time is 12:30");
+// }
+
+// Nullish Coalescing
+// result = a !== null && a !== undefined ? a : b; // like that result
+// let user;
+
+// console.log(user ?? "Anonymous"); // Anonymous (user is undefined)
+// let user = "John";
+
+// console.log(user ?? "Anonymous"); // John
