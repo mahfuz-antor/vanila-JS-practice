@@ -36,3 +36,16 @@
 // let user = "John";
 
 // console.log(user ?? "Anonymous"); // John
+
+// switch without break
+// let a = 2 + 2;
+// switch (a) {
+//   case 3:
+//     console.log("Too small");
+//   case 4:
+//     console.log("Exactly!"); // run
+//   case 5:
+//     console.log("Too big"); // run
+//   default:
+//     console.log("I don't know such values"); // run
+// }
